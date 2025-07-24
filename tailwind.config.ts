@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'headline': ['Merriweather', 'Georgia', 'serif'],
+				'body': ['Inter', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,7 +65,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Newspaper-specific colors
+				headline: 'hsl(var(--headline))',
+				subtext: 'hsl(var(--subtext))',
+				'article-bg': 'hsl(var(--article-bg))',
+				'button-primary': 'hsl(var(--button-primary))',
+				'button-hover': 'hsl(var(--button-hover))'
+			},
+			boxShadow: {
+				'subtle': 'var(--shadow-subtle)',
+				'card': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
