@@ -2,88 +2,128 @@ import React from 'react';
 
 const ArticleSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8">
-      {/* Newspaper Layout with Columns */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <section className="max-w-7xl mx-auto px-4 py-16">
+      {/* Two-Column Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         
-        {/* Main Article - Left Column */}
-        <article className="lg:col-span-8 border-r border-border pr-8">
-          <div className="border-b-2 border-primary pb-2 mb-4">
-            <span className="font-body text-sm font-bold uppercase tracking-wider">DEFENSE TECHNOLOGY</span>
+        {/* Main Article - Left Column (8/12) */}
+        <article className="lg:col-span-8 bg-article-bg rounded-xl shadow-card p-8 md:p-12 animate-fade-in">
+          <div className="border-b-2 border-accent pb-3 mb-6">
+            <span className="font-body text-sm font-semibold uppercase tracking-wider text-tech-accent">DEFENSE INNOVATION</span>
           </div>
           
-          <h2 className="font-headline font-black text-3xl md:text-4xl text-headline mb-2 leading-tight uppercase">
-            Revolutionary AI System Replaces Traditional War Rooms
+          <h2 className="font-headline font-black text-4xl md:text-5xl text-headline mb-4 leading-tight">
+            Revolutionary AI System Transforms Military Infrastructure
           </h2>
           
-          <div className="text-sm text-subtext mb-4 font-body">
-            By Defense Correspondent • Military Technology Division
+          <div className="text-sm text-subtext mb-8 font-body flex items-center space-x-4">
+            <span>By Defense Technology Correspondent</span>
+            <span>•</span>
+            <span>Military Innovation Division</span>
+            <span>•</span>
+            <span>{new Date().toLocaleDateString()}</span>
           </div>
           
-          <p className="font-body text-base leading-relaxed mb-4 text-justify first-letter:text-6xl first-letter:font-headline first-letter:font-black first-letter:float-left first-letter:mr-2 first-letter:mt-1 first-letter:leading-none">
-            KAAL represents a groundbreaking advancement in military training infrastructure, introducing an AI-driven terrain simulation system that fundamentally transforms traditional static war room methodologies. This revolutionary platform establishes immersive, dynamic training environments that prepare military personnel for real-world operational scenarios with unprecedented authenticity and tactical effectiveness.
-          </p>
-          
-          <p className="font-body text-base leading-relaxed mb-6 text-justify">
-            The implementation of this cutting-edge technology marks a significant departure from conventional training protocols, offering military commanders and personnel access to sophisticated simulation capabilities that mirror actual battlefield conditions with remarkable precision.
-          </p>
-
-          {/* Impact Statistics Box */}
-          <div className="border-2 border-primary bg-secondary p-6 mb-6">
-            <h3 className="font-headline font-bold text-xl text-headline mb-4 uppercase text-center">
-              OPERATIONAL IMPACT ASSESSMENT
-            </h3>
+          <div className="prose prose-lg max-w-none">
+            <p className="font-body text-lg leading-relaxed mb-6 text-justify first-letter:text-7xl first-letter:font-headline first-letter:font-black first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:leading-none first-letter:text-accent">
+              KAAL represents a paradigm shift in military training infrastructure, introducing an AI-driven terrain simulation system that fundamentally revolutionizes traditional static war room methodologies. This groundbreaking platform establishes immersive, dynamic training environments that prepare military personnel for real-world operational scenarios with unprecedented authenticity and tactical effectiveness.
+            </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="border-r border-border pr-4">
-                <div className="font-headline text-3xl font-black text-primary">25%</div>
-                <div className="font-body text-sm uppercase">Mission Success Increase</div>
-              </div>
-              <div className="border-r border-border pr-4">
-                <div className="font-headline text-3xl font-black text-primary">40%</div>
-                <div className="font-body text-sm uppercase">Faster Decision Making</div>
-              </div>
-              <div>
-                <div className="font-headline text-3xl font-black text-primary">₹30Cr</div>
-                <div className="font-body text-sm uppercase">Annual Savings</div>
+            <p className="font-body text-lg leading-relaxed mb-8 text-justify">
+              The implementation of this cutting-edge technology marks a significant departure from conventional training protocols, offering military commanders and personnel access to sophisticated simulation capabilities that mirror actual battlefield conditions with remarkable precision and strategic depth.
+            </p>
+
+            {/* Enhanced Impact Statistics */}
+            <div className="bg-gradient-to-br from-secondary to-muted rounded-xl p-8 mb-8 border border-border shadow-elegant animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
+              <h3 className="font-headline font-bold text-2xl text-headline mb-6 text-center">
+                Operational Impact Assessment
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-article-bg rounded-lg shadow-button hover:shadow-hover transition-all duration-300 hover:scale-105">
+                  <div className="font-headline text-4xl font-black text-primary mb-2">25%</div>
+                  <div className="font-body text-sm font-medium text-subtext uppercase tracking-wide">Mission Success Increase</div>
+                  <div className="w-16 h-1 bg-accent mx-auto mt-2 rounded-full"></div>
+                </div>
+                <div className="text-center p-4 bg-article-bg rounded-lg shadow-button hover:shadow-hover transition-all duration-300 hover:scale-105">
+                  <div className="font-headline text-4xl font-black text-tech-accent mb-2">40%</div>
+                  <div className="font-body text-sm font-medium text-subtext uppercase tracking-wide">Faster Decision Making</div>
+                  <div className="w-16 h-1 bg-tech-accent mx-auto mt-2 rounded-full"></div>
+                </div>
+                <div className="text-center p-4 bg-article-bg rounded-lg shadow-button hover:shadow-hover transition-all duration-300 hover:scale-105">
+                  <div className="font-headline text-4xl font-black text-destructive mb-2">₹30Cr</div>
+                  <div className="font-body text-sm font-medium text-subtext uppercase tracking-wide">Annual Cost Savings</div>
+                  <div className="w-16 h-1 bg-destructive mx-auto mt-2 rounded-full"></div>
+                </div>
               </div>
             </div>
+
+            <p className="font-body text-lg leading-relaxed text-justify">
+              This revolutionary approach to military preparedness not only enhances operational readiness but also demonstrates a commitment to leveraging advanced technology for national defense. The system's multi-sensory feedback mechanisms and real-time adaptation capabilities ensure that training scenarios remain relevant and challenging.
+            </p>
           </div>
         </article>
 
-        {/* Sidebar - Right Column */}
-        <aside className="lg:col-span-4">
-          <div className="border-b-2 border-primary pb-2 mb-4">
-            <span className="font-body text-sm font-bold uppercase tracking-wider">TECHNICAL BREAKDOWN</span>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="border border-border p-4 bg-secondary">
-              <h4 className="font-headline font-bold text-lg mb-2 uppercase">Key Advantages</h4>
-              <ul className="space-y-2 font-body text-sm">
-                <li className="flex items-start">
-                  <span className="font-black mr-2">■</span>
-                  <span><strong>Enhanced Tactical Readiness:</strong> Immersive simulation enhances soldiers' cognitive response under high-pressure scenarios</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="font-black mr-2">■</span>
-                  <span><strong>Accelerated Training Cycles:</strong> Multi-sensory feedback systems reduce traditional training timeframes significantly</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="font-black mr-2">■</span>
-                  <span><strong>Cost-Effective Infrastructure:</strong> Substantial reduction in physical training facility requirements</span>
-                </li>
-              </ul>
+        {/* Enhanced Sidebar - Right Column (4/12) */}
+        <aside className="lg:col-span-4 space-y-8">
+          {/* Key Features Box */}
+          <div className="bg-article-bg rounded-xl shadow-card p-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="border-b-2 border-tech-accent pb-3 mb-6">
+              <span className="font-body text-sm font-semibold uppercase tracking-wider text-tech-accent">Technical Advantages</span>
             </div>
             
-            <div className="border border-border p-4 bg-muted">
-              <h4 className="font-headline font-bold text-lg mb-2 uppercase">Implementation Timeline</h4>
-              <div className="font-body text-sm space-y-1">
-                <div><strong>Phase 1:</strong> System Integration (Q1 2024)</div>
-                <div><strong>Phase 2:</strong> Personnel Training (Q2 2024)</div>
-                <div><strong>Phase 3:</strong> Full Deployment (Q3 2024)</div>
+            <div className="space-y-4">
+              <div className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-300">
+                <div className="w-2 h-2 bg-accent rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div>
+                  <h4 className="font-body font-semibold text-headline mb-1">Enhanced Tactical Readiness</h4>
+                  <p className="font-body text-sm text-subtext leading-relaxed">Immersive simulation enhances cognitive response under high-pressure scenarios</p>
+                </div>
+              </div>
+              
+              <div className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-300">
+                <div className="w-2 h-2 bg-tech-accent rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div>
+                  <h4 className="font-body font-semibold text-headline mb-1">Accelerated Training Cycles</h4>
+                  <p className="font-body text-sm text-subtext leading-relaxed">Multi-sensory feedback reduces traditional training timeframes significantly</p>
+                </div>
+              </div>
+              
+              <div className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-300">
+                <div className="w-2 h-2 bg-destructive rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div>
+                  <h4 className="font-body font-semibold text-headline mb-1">Cost-Effective Infrastructure</h4>
+                  <p className="font-body text-sm text-subtext leading-relaxed">Substantial reduction in physical training facility requirements</p>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Implementation Timeline */}
+          <div className="bg-gradient-to-br from-primary/5 to-tech-accent/5 rounded-xl p-6 border border-border animate-slide-in-right" style={{ animationDelay: '0.9s' }}>
+            <h4 className="font-headline font-bold text-xl text-headline mb-4">Implementation Roadmap</h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-accent rounded-full"></div>
+                <div className="font-body text-sm"><strong>Q1 2024:</strong> System Integration & Testing</div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-tech-accent rounded-full"></div>
+                <div className="font-body text-sm"><strong>Q2 2024:</strong> Personnel Training & Certification</div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div className="font-body text-sm"><strong>Q3 2024:</strong> Full Operational Deployment</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quote Box */}
+          <div className="bg-article-bg rounded-xl shadow-elegant p-6 border-l-4 border-accent animate-fade-in" style={{ animationDelay: '1.2s' }}>
+            <blockquote className="font-elegant text-lg italic text-headline mb-4 leading-relaxed">
+              "KAAL represents the future of military training—where technology meets strategy to create unparalleled readiness."
+            </blockquote>
+            <cite className="font-body text-sm text-subtext">— Defense Technology Advisory Board</cite>
           </div>
         </aside>
       </div>

@@ -8,45 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Old newspaper color scheme */
-    --background: 45 29% 97%;  /* Cream/off-white newspaper color */
-    --foreground: 0 0% 8%;     /* Deep black ink */
+    /* Sophisticated newspaper color scheme */
+    --background: 39 11% 97%;     /* Off-white/light beige (#f9f6f1) */
+    --foreground: 0 0% 13%;       /* Dark charcoal (#222222) */
 
-    --card: 45 29% 98%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
 
-    --popover: 45 29% 98%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
 
-    --primary: 0 0% 8%;        /* Black ink */
-    --primary-foreground: 45 29% 97%;
+    --primary: 210 100% 21%;      /* Deep navy (#0a2e5d) */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 45 15% 92%;   /* Light gray for sections */
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 39 11% 95%;      /* Light beige variant */
+    --secondary-foreground: 0 0% 13%;
 
-    --muted: 45 15% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 39 11% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 20%;        /* Dark gray for accents */
-    --accent-foreground: 45 29% 97%;
+    --accent: 42 53% 53%;         /* Warm gold (#c49e4e) */
+    --accent-foreground: 0 0% 13%;
 
-    --destructive: 0 70% 35%;  /* Dark red */
-    --destructive-foreground: 45 29% 97%;
+    --destructive: 0 70% 41%;     /* Crimson (#b22222) */
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 75%;        /* Gray borders like newspaper lines */
-    --input: 45 15% 90%;
-    --ring: 0 0% 8%;
+    --border: 39 11% 85%;
+    --input: 39 11% 90%;
+    --ring: 210 100% 21%;
 
-    /* Newspaper-specific design tokens */
-    --headline: 0 0% 8%;       /* Pure black for headlines */
-    --subtext: 0 0% 30%;       /* Dark gray for subtext */
-    --article-bg: 45 29% 98%;  /* Slightly off-white for articles */
-    --masthead-bg: 0 0% 8%;    /* Black masthead background */
-    --column-border: 0 0% 65%; /* Column separator lines */
-    --shadow-newspaper: 0 1px 3px hsl(0 0% 0% / 0.3);
-    --shadow-deep: 0 4px 12px hsl(0 0% 0% / 0.4);
+    /* Enhanced design tokens */
+    --headline: 0 0% 13%;         /* Dark charcoal */
+    --subtext: 0 0% 45%;          /* Medium gray */
+    --article-bg: 0 0% 100%;      /* Pure white */
+    --masthead-bg: 210 100% 21%;  /* Deep navy */
+    --tech-accent: 174 44% 37%;   /* Teal (#2a9d8f) */
+    
+    /* Shadows for depth */
+    --shadow-elegant: 0 4px 20px -4px hsl(0 0% 13% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 13% / 0.2);
+    --shadow-button: 0 2px 8px -2px hsl(210 100% 21% / 0.3);
+    --shadow-hover: 0 6px 25px -6px hsl(210 100% 21% / 0.4);
 
-    --radius: 0rem;            /* No rounded corners for authentic look */
+    --radius: 0.75rem;            /* Rounded corners for modern feel */
 
     --sidebar-background: 0 0% 98%;
 
