@@ -4,75 +4,89 @@ const ResourcesSection = () => {
   const resources = [
     {
       title: "KAAL Introduction Video",
-      url: "https://drive.google.com/file/d/11gNAnd5bxeQN1AkiIQwxcJBQZcCb_Qvy/view?usp=sharing"
+      url: "https://drive.google.com/file/d/11gNAnd5bxeQN1AkiIQwxcJBQZcCb_Qvy/view?usp=sharing",
+      category: "DOCUMENTATION"
     },
     {
       title: "KAAL Mock UI",
-      url: "https://tactical-terrain-command-system-fck5.vercel.app"
+      url: "https://tactical-terrain-command-system-fck5.vercel.app",
+      category: "DEMONSTRATION"
     },
     {
       title: "KAAL Master Link (architecture and other important things)",
-      url: "https://kaal-digital-dominance-web.vercel.app"
+      url: "https://kaal-digital-dominance-web.vercel.app",
+      category: "TECHNICAL"
     },
     {
       title: "KAAL Intro Poster",
-      url: "https://drive.google.com/file/d/1t7CBodtWnz2yUhIhyLst2ZFLTsxDK0Tz/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1t7CBodtWnz2yUhIhyLst2ZFLTsxDK0Tz/view?usp=sharing",
+      category: "DOCUMENTATION"
     },
     {
       title: "KAAL Wiring Layout",
-      url: "https://drive.google.com/file/d/1VKb_k6uDcX_BmARV0pe3YYyf0uRIivzP/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1VKb_k6uDcX_BmARV0pe3YYyf0uRIivzP/view?usp=sharing",
+      category: "TECHNICAL"
     },
     {
       title: "KAAL Important Technical Data",
-      url: "https://drive.google.com/file/d/1eOUWXI3dKX_ZO7QzIsE6yzNHuF9Nbpc3/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1eOUWXI3dKX_ZO7QzIsE6yzNHuF9Nbpc3/view?usp=sharing",
+      category: "TECHNICAL"
     },
     {
       title: "KAAL Script Show Game",
-      url: "https://kaal-ops-command-sim.vercel.app"
+      url: "https://kaal-ops-command-sim.vercel.app",
+      category: "DEMONSTRATION"
     },
     {
       title: "My Future Plan ASRSH (KAAL is just a starting of something big)",
-      url: "https://future-smoky-gamma.vercel.app"
+      url: "https://future-smoky-gamma.vercel.app",
+      category: "FUTURE PLANS"
     }
   ];
 
   return (
-    <section className="bg-secondary/50 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-headline font-bold text-3xl md:text-4xl text-headline mb-4">
-            Explore KAAL Resources
+    <section className="bg-secondary border-t-4 border-primary py-8">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-8 border-b-2 border-primary pb-4">
+          <h2 className="font-masthead font-black text-3xl md:text-4xl text-headline uppercase tracking-wider">
+            KAAL RESOURCES & INTELLIGENCE
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto"></div>
+          <p className="font-body text-sm uppercase tracking-wider mt-2 text-subtext">
+            Classified Documents • Technical Specifications • Strategic Analysis
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        {/* Resources Grid - Newspaper Style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {resources.map((resource, index) => (
-            <a
-              key={index}
-              href={resource.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-article-bg border border-border rounded-lg p-6 shadow-subtle hover:shadow-card transition-all duration-300 hover:scale-[1.02] hover:border-accent/50"
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-body font-semibold text-lg text-headline group-hover:text-accent transition-colors duration-300 leading-tight">
+            <div key={index} className="border border-border bg-background p-4 hover:bg-muted transition-colors">
+              <div className="text-xs font-body font-bold uppercase tracking-wider text-subtext mb-2 border-b border-border pb-1">
+                {resource.category}
+              </div>
+              <a
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                <h3 className="font-headline font-bold text-sm leading-tight text-headline group-hover:text-primary transition-colors uppercase mb-2">
                   {resource.title}
                 </h3>
-                <svg 
-                  className="w-5 h-5 text-subtext group-hover:text-accent transition-colors duration-300 flex-shrink-0 ml-3" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </div>
-              <p className="text-sm text-subtext mt-2 group-hover:text-muted-foreground transition-colors duration-300">
-                Click to open in new tab
-              </p>
-            </a>
+                <div className="flex items-center justify-between">
+                  <span className="font-body text-xs text-subtext uppercase">CLICK TO ACCESS</span>
+                  <span className="text-xs text-subtext">➤</span>
+                </div>
+              </a>
+            </div>
           ))}
+        </div>
+        
+        {/* Bottom Notice */}
+        <div className="mt-8 text-center border-t border-border pt-4">
+          <p className="font-body text-xs uppercase tracking-wider text-subtext">
+            All resources open in new window • For official use only • Defense Technology Division
+          </p>
         </div>
       </div>
     </section>

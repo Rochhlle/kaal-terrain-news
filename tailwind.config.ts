@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'headline': ['Merriweather', 'Georgia', 'serif'],
-				'body': ['Inter', 'system-ui', 'sans-serif'],
+				'masthead': ['Playfair Display', 'Georgia', 'serif'],
+				'headline': ['Old Standard TT', 'Times New Roman', 'serif'],
+				'body': ['Crimson Text', 'Times New Roman', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
