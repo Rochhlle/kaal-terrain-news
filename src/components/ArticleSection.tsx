@@ -123,7 +123,7 @@ const ArticleSection = () => {
             <blockquote className="font-elegant text-lg italic text-headline mb-4 leading-relaxed">
               "This revolutionary training platform will redefine how our forces prepare for modern warfare challenges."
             </blockquote>
-            <cite className="font-body text-sm text-subtext">— Chief of Defense Staff</cite>
+            <cite className="font-body text-sm text-subtext">— Founder's Words</cite>
           </div>
         </aside>
       </div>
