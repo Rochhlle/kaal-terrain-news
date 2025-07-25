@@ -2,55 +2,55 @@ import React, { useState, useEffect } from 'react';
 import { ArrowUp } from 'lucide-react';
 
 const StickyNav = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-article-bg/98 backdrop-blur-md shadow-elegant border-b border-border/30' 
+        : 'bg-transparent'
     }`}>
-      <nav className="bg-primary/95 backdrop-blur-md border-b border-primary-foreground/20 shadow-elegant">
-        <div className="max-w-7xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <h1 className="font-masthead text-xl font-bold text-primary-foreground">
-                KAAL
-              </h1>
-              <span className="font-body text-sm text-primary-foreground/80">
-                Military Herald
-              </span>
+      <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/ded11918-8b96-493c-9a95-5d0d8cd6fdb0.png" 
+                alt="KAAL Logo" 
+                className="w-10 h-10 object-contain filter brightness-0 hover:brightness-100 transition-all duration-300 drop-shadow-logo"
+              />
             </div>
-            
+            <div className="flex flex-col">
+              <span className="font-masthead font-black text-xl text-headline tracking-wider">KAAL</span>
+              <span className="font-body text-xs text-subtext uppercase tracking-widest">Military Innovation</span>
+            </div>
+          </div>
+          
+          {isScrolled && (
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-all duration-300 hover:scale-105 shadow-button hover:shadow-hover"
+              className="flex items-center space-x-2 px-6 py-3 bg-brand-navy text-white rounded-xl font-body font-medium text-sm hover:bg-brand-navy/90 transition-all duration-300 hover:shadow-button hover:scale-105"
             >
               <ArrowUp size={16} />
-              <span className="font-body text-sm font-medium">Back to Top</span>
+              <span>Back to Top</span>
             </button>
-          </div>
+          )}
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 

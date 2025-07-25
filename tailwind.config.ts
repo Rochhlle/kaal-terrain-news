@@ -68,7 +68,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Enhanced design colors
+				// Professional brand colors
+				'brand-navy': 'hsl(var(--brand-navy))',
+				'brand-gold': 'hsl(var(--brand-gold))',
+				'brand-teal': 'hsl(var(--brand-teal))',
+				'brand-charcoal': 'hsl(var(--brand-charcoal))',
 				headline: 'hsl(var(--headline))',
 				subtext: 'hsl(var(--subtext))',
 				'article-bg': 'hsl(var(--article-bg))',
@@ -79,6 +83,7 @@ export default {
 				'card': 'var(--shadow-card)',
 				'button': 'var(--shadow-button)',
 				'hover': 'var(--shadow-hover)',
+				'logo': 'var(--shadow-logo)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
