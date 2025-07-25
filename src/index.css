@@ -8,42 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 250 249 246;
-    --foreground: 26 26 26;
-    --card: 255 255 255;
-    --card-foreground: 26 26 26;
-    --popover: 255 255 255;
-    --popover-foreground: 26 26 26;
-    --primary: 10 46 93;
-    --primary-foreground: 255 255 255;
-    --secondary: 242 242 242;
-    --secondary-foreground: 26 26 26;
-    --muted: 248 248 248;
-    --muted-foreground: 115 115 115;
-    --accent: 196 158 78;
-    --accent-foreground: 26 26 26;
-    --destructive: 220 38 38;
-    --destructive-foreground: 255 255 255;
-    --border: 229 229 229;
-    --input: 242 242 242;
-    --ring: 196 158 78;
+    /* Sophisticated newspaper color scheme */
+    --background: 39 11% 97%;     /* Off-white/light beige (#f9f6f1) */
+    --foreground: 0 0% 13%;       /* Dark charcoal (#222222) */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    --primary: 210 100% 21%;      /* Deep navy (#0a2e5d) */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 39 11% 95%;      /* Light beige variant */
+    --secondary-foreground: 0 0% 13%;
+
+    --muted: 39 11% 92%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 42 53% 53%;         /* Warm gold (#c49e4e) */
+    --accent-foreground: 0 0% 13%;
+
+    --destructive: 0 70% 41%;     /* Crimson (#b22222) */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 39 11% 85%;
+    --input: 39 11% 90%;
+    --ring: 210 100% 21%;
+
+    /* Enhanced design tokens */
+    --headline: 0 0% 13%;         /* Dark charcoal */
+    --subtext: 0 0% 45%;          /* Medium gray */
+    --article-bg: 0 0% 100%;      /* Pure white */
+    --masthead-bg: 210 100% 21%;  /* Deep navy */
+    --tech-accent: 174 44% 37%;   /* Teal (#2a9d8f) */
     
-    /* Professional brand colors */
-    --brand-navy: 10 46 93;
-    --brand-gold: 196 158 78;
-    --brand-teal: 42 157 143;
-    --brand-charcoal: 64 64 64;
-    --headline: 26 26 26;
-    --subtext: 87 87 87;
-    --article-bg: 255 255 255;
-    --tech-accent: 42 157 143;
-    
-    /* Professional shadows */
-    --shadow-elegant: 0 8px 25px -8px rgb(0 0 0 / 0.12), 0 4px 12px -4px rgb(0 0 0 / 0.08);
-    --shadow-card: 0 2px 8px -2px rgb(0 0 0 / 0.08), 0 1px 4px -1px rgb(0 0 0 / 0.06);
-    --shadow-button: 0 4px 12px -2px rgb(10 46 93 / 0.15), 0 2px 6px -1px rgb(10 46 93 / 0.1);
-    --shadow-hover: 0 12px 32px -8px rgb(0 0 0 / 0.15), 0 6px 20px -6px rgb(0 0 0 / 0.1);
-    --shadow-logo: 0 2px 8px rgb(0 0 0 / 0.15);
+    /* Shadows for depth */
+    --shadow-elegant: 0 4px 20px -4px hsl(0 0% 13% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 13% / 0.2);
+    --shadow-button: 0 2px 8px -2px hsl(210 100% 21% / 0.3);
+    --shadow-hover: 0 6px 25px -6px hsl(210 100% 21% / 0.4);
 
     --radius: 0.75rem;            /* Rounded corners for modern feel */
 
