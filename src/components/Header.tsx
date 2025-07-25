@@ -16,10 +16,6 @@ const Header = () => {
             THE MILITARY HERALD
           </h1>
           <div className="flex justify-center items-center space-x-6 mt-3 text-sm font-body text-primary-foreground/90 animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
-            <span className="hidden md:inline">ESTABLISHED 1947</span>
-            <span className="hidden md:inline">•</span>
-            <span>NEW DELHI, INDIA</span>
-            <span>•</span>
             <span className="hidden sm:inline">{new Date().toLocaleDateString('en-GB', { 
               weekday: 'long', 
               year: 'numeric', 

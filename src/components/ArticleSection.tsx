@@ -121,9 +121,9 @@ const ArticleSection = () => {
           {/* Quote Box */}
           <div className="bg-article-bg rounded-xl shadow-elegant p-6 border-l-4 border-accent animate-fade-in" style={{ animationDelay: '1.2s' }}>
             <blockquote className="font-elegant text-lg italic text-headline mb-4 leading-relaxed">
-              "KAAL represents the future of military training—where technology meets strategy to create unparalleled readiness."
+              "This revolutionary training platform will redefine how our forces prepare for modern warfare challenges."
             </blockquote>
-            <cite className="font-body text-sm text-subtext">— Defense Technology Advisory Board</cite>
+            <cite className="font-body text-sm text-subtext">— Chief of Defense Staff</cite>
           </div>
         </aside>
       </div>

@@ -143,16 +143,6 @@ const ResourcesSection = () => {
           })}
         </div>
         
-        {/* Bottom Notice */}
-        <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '1.8s' }}>
-          <div className="bg-article-bg rounded-xl shadow-elegant p-6 border border-border/50 max-w-4xl mx-auto">
-            <p className="font-body text-sm text-subtext leading-relaxed">
-              <strong className="text-headline">Security Notice:</strong> All resources are cleared for official use by authorized defense personnel. 
-              External links open in new windows for security verification. For technical support or additional documentation, 
-              contact the Defense Technology Division.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
